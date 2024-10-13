@@ -19,6 +19,7 @@ data = []
 
 if file is not None:
     img = Image.open(file)
+    img = img.convert('RGB')
     img = img.resize((30,30))
     img = np.expand_dims(img, axis=0)
     img = np.array(img)
